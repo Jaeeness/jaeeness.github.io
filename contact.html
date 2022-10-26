@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>Oliver's Coffee Company</title>
+        <!-- Author: Jaelynn Nesvacil
+            Date: 04/06/2020
+            Document: HW7 -->
+        <link href="coffee.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="home" class="banner">
+            <header>
+                <h1 class="title"><img class="logo" src="logo.png"><span class="header">Oliver's Coffee Company</span></h1>
+                <div class="tagline">
+                    <h2 class="slogan">"Good to the Last Drop!"</h2>
+                 </div>
+                <div class="address">
+                    <h3 class="addy">1170 Worcester Rd. Framingham, MA &nbsp; (508) 875-1023</h3> 
+                </div>  
+                <nav>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                    <li><a class="active" href="contact.html">Customer Feedback</a></li>
+                </nav>
+            </header>
+        </div>
+        <h1>Customer Survey</h1>
+        <p>
+            Thank you for taking the time to complete our customer survey! 
+            Your contribution helps us to improve ourselves to give you the service you deserve.
+            Every customer that takes the survey is entered into our coffee giveaway. Every month a randomly selected customer will recieve free coffee for a month!
+            Check your e-mail to see if you won. Drawings are done on the first of every month.
+        </p>
+        <p>
+            Surveys are kept private and confidential. Oliver's Coffee Company will never share your contact information with anyone. 
+        </p>
+        <form id="survey" action="nesvacil@gmail.com" method="POST" target="_self">
+            <fieldset>
+                <legend>Customer Info</legend>
+                Required values are marked with an asterisk (*)
+                    <div class="formRow">
+                        <label for="fname">First Name*:</label>
+                        <input type="text" id="fname" required> 
+                    </div>
+                    <div class="formRow">
+                        <label for="lname">Last Name*:</label>
+                        <input type="text" id="lname" required>
+                    </div>
+                    <div class="formRow">
+                        <label for="street">Street Address:</label>
+                        <input type="text" id="street">
+                    </div>
+                    <div class="formRow">
+                        <label for="city">City:</label>
+                        <input type="text" id="city">
+                    </div>
+                    <div class="formRow">
+                        <label>State:</label>
+                        <input type="text">
+                    </div>
+                    <div class="formRow">
+                        <label>Postal Code:</label>
+                        <input type="text" pattern="^\d{5}(-\d{4})?$">
+                    </div>
+                    <div class="formRow">
+                        <label>Phone Number:</label>
+                        <input type="tel" placeholder="(nnn) nnn-nnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+                    </div>
+                    <div class="formRow">
+                        <label>E-mail*:</label>
+                        <input type="mail"required>
+                    </div>
+                    <div class="formRow">
+                        <label>Where did you hear about us? 
+                            <br>(select all that apply) 
+                        </label> 
+                        <select size="5" multiple> 
+                            <option value="internet">Google</option> 
+                            <option value="mag">Facebook</option> 
+                            <option value="news">Instagram</option> 
+                            <option value="word">Word of Mouth</option> 
+                            <option value="other">Other</option> 
+                        </select>
+                    </div>
+
+                     <table>
+                        <tr>
+                            <th colspan="2"><u>What is your Favorite Drink?</u></th>
+                        </tr>
+                        <tr>
+                            <td><label for="Capp">Cappuccino</label></td>
+                            <td><input id="Capp" type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Latte</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Americano</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Lose Leaf Tea</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Espresso</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Iced Latte</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Iced Chai</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Iced Macchiato</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Iced Tea</label></td>
+                            <td><input type="checkbox"></td>
+                        </tr>
+                    </table>
+                    <hr>
+
+                    <label for="mail">Add me to your mailing list to receive great coupons and specials!</label>
+                    <input id="mail" value="yes" type="checkbox">
+            </fieldset>
+            <fieldset>
+                <legend>Your Experience at Oliver's Coffee Company</legend>
+                    <div class="formRow"> 
+                        <label for="visit">Date of visit</label> 
+                        <input name="visitDate" id="visit" type="date"> 
+                    </div>
+                    <div class="formRow">
+                        <label>How did you order?</label>
+                        <fieldset>
+                            <label>Dine in</label>
+                            <input name="oCorrect" type="radio">
+                            <label>Take Out</label>
+                            <input name="oCorrect" type="radio">
+                        </fieldset>
+                        <label>Were you satisfied with your order?</label>
+                        <fieldset>
+                            <label>Yes</label>
+                            <input name="oCorrect" type="radio">
+                            <label>No</label>
+                            <input name="oCorrect" type="radio">
+                        </fieldset>
+                    </div>
+                    <div class="formRow">
+                        <fieldset id="servRate">
+                            <legend>How Would You Rate Your Overall Service?</legend>
+                            <label>Horrible</label>
+                            <input name="oCorrect" type="radio">
+                            <label>Bad</label>
+                            <input name="oCorrect" type="radio">
+                            <label>Okay</label>
+                            <input name="oCorrect" type="radio">
+                            <label>Good</label>
+                            <input name="oCorrect" type="radio">
+                            <label>Excellent</label>
+                            <input name="oCorrect" type="radio">
+                        </fieldset>
+                    </div>
+                    <label>Tell us more about your experience!</label>
+                    <textarea></textarea>
+                    <div class="formRow">
+                        <fieldset>
+                            <legend id="QOM">Question of the Month</legend>
+                            
+                            <label>What is your favorite breakfast dish?</label>
+                            <select size="5" multiple>
+                                <option>Bagel with Cream Cheese</option>
+                                <option>Bacon, Egg, and Cheese</option>
+                                <option>Muffin</option>
+                                <option>Crossaint</option>
+                                <option>Parfait</option>
+                                <option>Sausage, Egg, and Cheese</option>
+                                <option>Donut</option>
+                                <option>Oatmeal</option>
+                                <option>Breakfast Panini</option>
+                                <option>Avocado Toast & Poached Eggs</option>
+                            </select>  
+                        </fieldset> 
+                    </div>
+            </fieldset>
+                <div id="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Cancel">
+                </div>
+        </form>
+        <div class="footer">
+            <button><a href="#">Back to Top</a></button>
+            <footer> 
+                &copy; This page designed by <a class="link" href="mailto:jaelynn@email.com">Jaelynn Nesvacil</a> on 03/25/30
+                <br>
+                Sources: <a class="link" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.jing.fm%2Ficlip%2Fu2a9
+                o0o0r5o0y3e6_free-clip-art-coffee-mug-transparent-background-coffee%2F&psig=AOvVaw3n9bn9CP8HAGz
+                Q8c8T77WV&ust=1585239678747000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCkvZmEtugCFQAAAAAdAAAAABAL">Logo</a>, <a class="link" href="https://cdn.shopify.com/s/files/1/0271/7209/files/iced_coffee_death_wish.jpg?v=1521634200">
+                iced coffee image</a>, <a class="link" href="https://res.cloudinary.com/grohealth/image/upload/v1581688713/DCUK/Content/iStock-938993594-1000x600.jpg">
+                hot coffee image</a>, <a class="link" href="https://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/1C11DD7A77714168B2EFA65CD2900138/loose-leaf-tea_1C11DD7A77714168B2EFA65CD2900138.jpg">
+                tea image</a>, <a class="link" href="https://upload.wikimedia.org/wikipedia/commons/7/78/BlackStar.PNG">black star image</a>, <a class="link" href="https://banner2.cleanpng.com/20180602/sga/kisspng-faq-computer-icons-question-information-de-hart-pl-5b133c166383a3.4039153315279872224076.jpg">
+                FAQ image</a>
+            </footer>
+        </div>
+    </body>
+</html>
